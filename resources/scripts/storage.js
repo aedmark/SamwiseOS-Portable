@@ -48,6 +48,37 @@ class StorageManager {
             console.warn(`Could not remove item for key '${key}'. Error: ${e.message}`);
         }
     }
+
+    /**
+     * Exports all data from localStorage into a single JSON string.
+     * @returns {string} A JSON string representing all localStorage data.
+     */
+    exportLocalStorage() {
+        const data = {};
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            data[key] = localStorage.getItem(key);
+        }
+        return JSON.stringify(data, null, 2);
+    }
+
+    /**
+     * Imports data from a JSON string into localStorage, clearing existing data first.
+     * @param {string} jsonString - A JSON string representing localStorage data.
+     */
+    importLocalStorage(jsonString) {
+        try {
+            const data = JSON.parse(jsonString);
+            localStorage.clear();
+            for (const key in data) {
+                if (Object.hasOwnProperty.call(data, key)) {
+                    localStorage.setItem(key, data[key]);
+                }
+            }
+        } catch (e) {
+            console.error("Failed to import localStorage data:", e);
+        }
+    }
 }
 
 
@@ -131,6 +162,7 @@ class IndexedDBManager {
 class NeutralinoFSManager {
     constructor() {
         this.fsFilePath = null;
+        this.localStorageFilePath = null;
     }
 
     setDependencies(dependencies) {
@@ -141,6 +173,7 @@ class NeutralinoFSManager {
         try {
             const dataDir = `${NL_PATH}/data`;
             this.fsFilePath = `${dataDir}/samwiseos_fs.json`;
+            this.localStorageFilePath = `${dataDir}/samwiseos_localstorage.json`;
             try {
                 await Neutralino.filesystem.getStats(dataDir);
             } catch (e) {
@@ -182,6 +215,37 @@ class NeutralinoFSManager {
             if (e.code === 'NE_FS_FILENOTF') return true; // Already gone.
             console.error("NeutralinoFS Clear Error:", e);
             return false;
+        }
+    }
+
+    async saveLocalStorage(jsonData) {
+        try {
+            await Neutralino.filesystem.writeFile(this.localStorageFilePath, jsonData);
+            return true;
+        } catch (e) {
+            console.error("NeutralinoFS localStorage Save Error:", e);
+            return false;
+        }
+    }
+
+    async loadLocalStorage() {
+        try {
+            // NEW: More robust loading logic.
+            // First, check if the file exists and has content before trying to read.
+            const stats = await Neutralino.filesystem.getStats(this.localStorageFilePath);
+            if (stats.size === 0) {
+                return null; // Treat an empty file as if it doesn't exist.
+            }
+            // If it has content, read it.
+            return await Neutralino.filesystem.readFile(this.localStorageFilePath);
+        } catch (e) {
+            // If getStats fails because the file isn't found, that's perfectly normal on a first run.
+            if (e.code === 'NE_FS_FILENOTF') {
+                return null;
+            }
+            // For any other error, log it but don't crash the app.
+            console.error("NeutralinoFS localStorage Load Error:", e);
+            return null;
         }
     }
 }
@@ -233,5 +297,18 @@ class StorageHAL {
     async clear() {
         if (!this.backend) throw new Error("StorageHAL not initialized.");
         return this.backend.clear();
+    }
+
+    async saveLocalStorage(jsonData) {
+        if (this.backend && typeof this.backend.saveLocalStorage === 'function') {
+            return this.backend.saveLocalStorage(jsonData);
+        }
+    }
+
+    async loadLocalStorage() {
+        if (this.backend && typeof this.backend.loadLocalStorage === 'function') {
+            return this.backend.loadLocalStorage();
+        }
+        return null;
     }
 }

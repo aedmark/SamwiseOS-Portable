@@ -7,3 +7,8 @@
 /pyodide/
 /dist/
 /bin/
+/.tmp/window_state.config.json
+/resources/neutralinojs.log
+/neutralinojs.log
+/resources/neutralino.d.ts
+/.tmp/auth_info.json

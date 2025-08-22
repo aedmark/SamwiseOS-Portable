@@ -108,7 +108,7 @@ const OopisOS_Kernel = {
             this.pyodide.FS.mkdir('/core');
             this.pyodide.FS.mkdir('/core/commands');
             this.pyodide.FS.mkdir('/core/apps');
-            await this.pyodide.runPythonAsync(`import sys\\nsys.path.append('/core')`);
+            await this.pyodide.runPythonAsync(`import sys; sys.path.append('/core')`);
 
             // This is the new, refactored loading process!
             const filesToLoad = this.getKernelFileManifest();

@@ -86,6 +86,20 @@ window.onload = async () => {
 
     await storageHAL.init();
 
+    // Load persisted localStorage if in portable mode
+    const persistedLocalStorage = await storageHAL.loadLocalStorage();
+    if (persistedLocalStorage) {
+        storageManager.importLocalStorage(persistedLocalStorage);
+    }
+
+    // Set up exit handler for portable mode
+    if (typeof Neutralino !== 'undefined' && Neutralino.app) {
+        Neutralino.events.on("windowClose", async () => {
+            await storageHAL.saveLocalStorage(storageManager.exportLocalStorage());
+            Neutralino.app.exit();
+        });
+    }
+
     // Await the kernel initialization
     await OopisOS_Kernel.initialize(dependencies);
 

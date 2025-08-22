@@ -95,6 +95,12 @@ window.OnboardingManager = class OnboardingManager extends App {
                     StorageManager.saveItem(Config.STORAGE_KEYS.ONBOARDING_COMPLETE, true, "Onboarding Status");
                     StorageManager.saveItem(Config.STORAGE_KEYS.LAST_CREATED_USER, this.state.userData.username, "Last Created User");
 
+                    // Explicitly save the now-populated LocalStorage to a file in portable mode.
+                    // This ensures that when the app reloads, the file is there to be read.
+                    await this.dependencies.StorageHAL.saveLocalStorage(
+                        this.dependencies.StorageManager.exportLocalStorage()
+                    );
+
                     this.ui.update({ ...this.state, step: 'complete' });
 
                     setTimeout(() => {
