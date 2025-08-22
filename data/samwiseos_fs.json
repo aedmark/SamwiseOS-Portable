@@ -1,0 +1,94 @@
+{
+  "/": {
+    "type": "directory",
+    "children": {
+      "home": {
+        "type": "directory",
+        "children": {
+          "root": {
+            "type": "directory",
+            "children": {},
+            "owner": "root",
+            "group": "root",
+            "mode": 493,
+            "mtime": "2025-08-22T13:40:34.784000Z"
+          },
+          "Guest": {
+            "type": "directory",
+            "children": {},
+            "owner": "Guest",
+            "group": "Guest",
+            "mode": 493,
+            "mtime": "2025-08-22T13:40:34.784000Z"
+          },
+          "aedmark": {
+            "type": "directory",
+            "children": {},
+            "owner": "aedmark",
+            "group": "aedmark",
+            "mode": 493,
+            "mtime": "2025-08-22T13:40:35.211000Z"
+          }
+        },
+        "owner": "root",
+        "group": "root",
+        "mode": 493,
+        "mtime": "2025-08-22T13:40:35.209999Z"
+      },
+      "etc": {
+        "type": "directory",
+        "children": {
+          "ai.conf": {
+            "type": "file",
+            "content": "{\n  \"provider\": \"ollama\",\n  \"model\": null\n}",
+            "owner": "root",
+            "group": "root",
+            "mode": 420,
+            "mtime": "2025-08-22T13:40:34.784000Z"
+          },
+          "sudoers": {
+            "type": "file",
+            "content": "# /etc/sudoers...",
+            "owner": "root",
+            "group": "root",
+            "mode": 288,
+            "mtime": "2025-08-22T13:40:34.784000Z"
+          },
+          "themes": {
+            "type": "directory",
+            "children": {},
+            "owner": "root",
+            "group": "root",
+            "mode": 493,
+            "mtime": "2025-08-22T13:40:34.784000Z"
+          }
+        },
+        "owner": "root",
+        "group": "root",
+        "mode": 493,
+        "mtime": "2025-08-22T13:40:34.784000Z"
+      },
+      "var": {
+        "type": "directory",
+        "children": {
+          "log": {
+            "type": "directory",
+            "children": {},
+            "owner": "root",
+            "group": "root",
+            "mode": 493,
+            "mtime": "2025-08-22T13:40:34.784000Z"
+          }
+        },
+        "owner": "root",
+        "group": "root",
+        "mode": 493,
+        "mtime": "2025-08-22T13:40:34.784000Z"
+      }
+    },
+    "owner": "root",
+    "group": "root",
+    "mode": 493,
+    "mtime": "2025-08-22T13:40:34.784000Z"
+  }
+}

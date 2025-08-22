@@ -1,0 +1,27 @@
+INFO 2025-08-22 08:33:42,441 Auth info was exported to ./.tmp/auth_info.json api\debug\debug.cpp:17 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:33:43,023 NE_RS_UNBLDRE: Unable to load application resource file /resources/favicon.ico api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:33:43,064 NE_RS_UNBLDRE: Unable to load application resource file /resources/.well-known/appspecific/com.chrome.devtools.json api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:33:43,171 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/marked.umd.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:33:43,171 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/purify.min.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:33:43,172 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/Tone.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:34:11,021 NE_RS_UNBLDRE: Unable to load application resource file /resources/.well-known/appspecific/com.chrome.devtools.json api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:34:11,153 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/marked.umd.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:34:11,160 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/purify.min.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:34:11,178 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/Tone.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:34:50,461 NE_RS_UNBLDRE: Unable to load application resource file /resources/.well-known/appspecific/com.chrome.devtools.json api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:34:50,713 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/marked.umd.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:34:50,713 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/purify.min.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:34:50,713 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/Tone.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+INFO 2025-08-22 08:40:11,853 Auth info was exported to ./.tmp/auth_info.json api\debug\debug.cpp:17 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:12,443 NE_RS_UNBLDRE: Unable to load application resource file /resources/.well-known/appspecific/com.chrome.devtools.json api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:12,565 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/marked.umd.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:12,568 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/purify.min.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:12,568 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/Tone.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:38,642 NE_RS_UNBLDRE: Unable to load application resource file /resources/.well-known/appspecific/com.chrome.devtools.json api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:38,650 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/marked.umd.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:38,653 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/purify.min.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:38,672 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/Tone.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:49,666 NE_RS_UNBLDRE: Unable to load application resource file /resources/.well-known/appspecific/com.chrome.devtools.json api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:49,674 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/marked.umd.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:49,678 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/purify.min.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
+ERROR 2025-08-22 08:40:49,696 NE_RS_UNBLDRE: Unable to load application resource file /resources/dep/Tone.js.map api\debug\debug.cpp:20 Andrew@DESKTOP-AQLHKVU
